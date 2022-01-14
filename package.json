@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "install:all": "npm install && cd client && npm install",
+    "install": "cd client && npm install",
     "build": "rm -rf build && cd client && npm run build && mv build ../. ",
     "start": "cross-env NODE_ENV=production node index.js",
     "dev": "cross-env NODE_ENV=development nodemon index.js",

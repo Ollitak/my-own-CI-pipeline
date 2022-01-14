@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: '12.x'
       - name: npm install 
-        run: npm run install:all
+        run: npm run install
       - name: lint
         run: npm run lint:front-end
       - name: build
