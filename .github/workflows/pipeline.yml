@@ -16,4 +16,4 @@ jobs:
       - name: npm install 
         run: npm run install:all
       - name: lint
-        run: npm run lint:frontend
+        run: npm run lint:front-end
