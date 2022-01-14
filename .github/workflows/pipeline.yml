@@ -28,3 +28,12 @@ jobs:
         run: npm run test:front-end
       - name: test back-end
         run: npm run test
+      - name: deploy to heroku
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "my-own-ci-pipeline"
+          heroku_email: "olli.takaanttila@gmail.com"
+        env:
+          HD_MONGODB_URI: ${{secrets.MONGODB_URI}}
+          HD_SECRET: ${{secrets.SECRET}}
