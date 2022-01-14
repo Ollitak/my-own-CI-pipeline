@@ -34,6 +34,9 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "my-own-ci-pipeline"
           heroku_email: "olli.takaanttila@gmail.com"
+          healthcheck: "https://full-stack-open-pokedex-ot.herokuapp.com/health"
+          checkstring: "ok"
+          rollbackonhealthcheckfailed: true
         env:
           HD_MONGODB_URI: ${{secrets.MONGODB_URI}}
           HD_SECRET: ${{secrets.SECRET}}
