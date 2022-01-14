@@ -2,7 +2,6 @@ import React from 'react'
 import '@testing-library/jest-dom/extend-expect'
 import { render, fireEvent } from '@testing-library/react'
 import CreateBlog from './CreateBlog'
-import { act } from 'react-dom/test-utils'
 
 
 
@@ -30,7 +29,7 @@ test('5.16', () => {
 
   fireEvent.submit(form)
 
-  
+
   expect(addingBlog.mock.calls).toHaveLength(1)
   expect(addingBlog.mock.calls[0][0].title).toBe('TESTTITLE' )
   expect(addingBlog.mock.calls[0][0].author).toBe('TESTAUTHOR' )
